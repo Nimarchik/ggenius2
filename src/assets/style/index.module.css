@@ -114,9 +114,16 @@ input {
     width: 390px;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
   .container {
     width: 350px;
+  }
+  .whatinnerListItem,
+  .whatinnerListItemSword,
+  .whatinnerListItemCup,
+  .whatinnerListItemFlag,
+  .whatinnerListItemBrain {
+    width: 305px;
   }
 }
 .home {
@@ -955,7 +962,7 @@ input {
     visibility: hidden;
   }
 }
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 420px) {
   .homeInnerContentTitle,
   .whatinnerTitle,
   .workInnerTitle,
@@ -971,6 +978,41 @@ input {
   }
   .mySwiper {
     width: 390px;
+  }
+  .partnersInner {
+    width: 405px;
+  }
+}
+@media screen and (max-width: 412px) {
+  .partnersInner {
+    width: 396px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .partnersInner {
+    width: 380px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 380px) {
+  .whatinnerListItem,
+  .whatinnerListItemSword,
+  .whatinnerListItemCup,
+  .whatinnerListItemFlag,
+  .whatinnerListItemBrain {
+    width: 305px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .whatinnerListItem,
+  .whatinnerListItemSword,
+  .whatinnerListItemCup,
+  .whatinnerListItemFlag,
+  .whatinnerListItemBrain {
+    width: 298px;
+  }
+  .partnersInnerContLink {
+    width: 249px;
   }
 }
 .header {
@@ -1131,11 +1173,13 @@ input {
 
 @media screen and (max-width: 580px) {
   .header {
+    padding: 24px 0 16px 0;
+    align-items: center;
     width: 100%;
   }
   .nav {
     padding: 0 5px;
-    width: 90%;
+    width: 95%;
   }
   .navLogoLink {
     position: relative;
@@ -1145,6 +1189,8 @@ input {
     display: flex;
     gap: 7px;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 32px;
     height: 32px;
     visibility: visible;
@@ -1351,7 +1397,7 @@ input {
     display: flex;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 380px) and (max-height: 740px) {
   .navLang {
     margin-bottom: 5px;
   }
@@ -1363,8 +1409,8 @@ input {
   }
   .navActiveBtnsLink,
   .navActiveBtnsLinkInv {
-    width: 340px;
-    height: 50px;
+    width: 343px;
+    height: 43px;
   }
   .workInnerListItemGroupImgStartZoom,
   .workInnerListItemGroupImgNextZoom,
@@ -1379,6 +1425,20 @@ input {
   }
   .progressInnerMapListMob {
     right: 22%;
+  }
+  .navMenuActive {
+    padding: 84px 10px 0;
+  }
+}
+@media screen and (max-width: 346px) {
+  .nav {
+    padding: 0 5px;
+    width: 93%;
+  }
+  .navActiveBtnsLink,
+  .navActiveBtnsLinkInv {
+    width: 300px;
+    height: 50px;
   }
 }
 .footer {

@@ -170,7 +170,7 @@
     visibility: hidden;
   }
 }
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 420px) {
   .homeInnerContentTitle,
   .whatinnerTitle,
   .workInnerTitle,
@@ -187,5 +187,44 @@
   }
   .mySwiper {
     width: 390px;
+  }
+  .partnersInner {
+    width: 405px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .partnersInner {
+    width: 396px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .partnersInner {
+    width: 380px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .whatinnerListItem,
+  .whatinnerListItemSword,
+  .whatinnerListItemCup,
+  .whatinnerListItemFlag,
+  .whatinnerListItemBrain {
+    width: 305px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .whatinnerListItem,
+  .whatinnerListItemSword,
+  .whatinnerListItemCup,
+  .whatinnerListItemFlag,
+  .whatinnerListItemBrain {
+    width: 298px;
+  }
+
+  .partnersInnerContLink {
+    width: 249px;
   }
 }

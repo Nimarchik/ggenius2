@@ -1,11 +1,13 @@
 @media screen and (max-width: 580px) {
   .header {
+    padding: 24px 0 16px 0;
+    align-items: center;
     width: 100%;
   }
 
   .nav {
     padding: 0 5px;
-    width: 90%;
+    width: 95%;
   }
 
   .navLogoLink {
@@ -16,6 +18,8 @@
     display: flex;
     gap: 7px;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 32px;
     height: 32px;
     visibility: visible;
@@ -223,7 +227,7 @@
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 380px) and (max-height: 740px) {
   .navLang {
     margin-bottom: 5px;
   }
@@ -237,8 +241,8 @@
 
   .navActiveBtnsLink,
   .navActiveBtnsLinkInv {
-    width: 340px;
-    height: 50px;
+    width: 343px;
+    height: 43px;
   }
   .workInnerListItemGroupImgStartZoom,
   .workInnerListItemGroupImgNextZoom,
@@ -255,5 +259,21 @@
 
   .progressInnerMapListMob {
     right: 22%;
+  }
+
+  .navMenuActive {
+    padding: 84px 10px 0;
+  }
+}
+
+@media screen and (max-width: 346px) {
+  .nav {
+    padding: 0 5px;
+    width: 93%;
+  }
+  .navActiveBtnsLink,
+  .navActiveBtnsLinkInv {
+    width: 300px;
+    height: 50px;
   }
 }
