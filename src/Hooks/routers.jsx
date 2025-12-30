@@ -16,10 +16,6 @@ export const routes = [
         element: <Home />
       },
       {
-        path: '/',
-        element: <Home />
-      },
-      {
         path: 'About',
         element: <About />
       },
