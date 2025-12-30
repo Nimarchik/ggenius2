@@ -57,8 +57,8 @@ const Home = () => {
         </div>
 
         <div className={style.homeinnerImgGroup2}>
-          <img className={style.homeInnerImg2Blur} src={obs} alt="" />
-          <img className={style.homeInnerImg2} src={obs} alt="" />
+          <img className={style.homeInnerImg2Blur} src={obs} alt="hero Obsidia blur" fetchpriority='high' />
+          <img className={style.homeInnerImg2} src={obs} alt="hero Obsidia" />
         </div>
 
         <div className={style.homeInnerImgUnion}>Mobile Legends</div>

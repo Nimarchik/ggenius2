@@ -350,7 +350,7 @@
       width: $w;
       height: $h;
 
-      background: url("/src/page/Home/img/flag-sprite.png") 0 0 no-repeat;
+      background: url("/src/page/Home/img/flag-sprite.webp") 0 0 no-repeat;
       background-size: calc(#{$w} * #{$frames}) $h;
 
       animation: flagWave 1.3s steps(15, end);
