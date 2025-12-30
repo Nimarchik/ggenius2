@@ -9,7 +9,7 @@ const LanguageProvider = () => {
   useEffect(() => {
     const lang = searchParams.get('lang') || 'uk';
     i18n.changeLanguage(lang);
-  }, [i18n, searchParams]);
+  }, []);
 
   return null;
 };
