@@ -1,0 +1,191 @@
+@media screen and (max-width: 560px) {
+  .imgBack {
+    width: 1515px;
+    height: 852px;
+  }
+
+  .homeInnerContent {
+    top: 152px;
+    width: 100%;
+  }
+
+  .homeInnerContentTitle,
+  .whatinnerTitle,
+  .workInnerTitle,
+  .progressInnerTitle {
+    @include titleSectionMob;
+  }
+  .homeInnerContentSub,
+  .whatinnerSub,
+  .workInnerSub {
+    @include subSectionMob;
+  }
+
+  .whatinnerSub {
+    margin-bottom: 24px;
+  }
+
+  .homeinnerImgGroup2 {
+    display: none;
+    visibility: hidden;
+  }
+
+  .homeInnerImg,
+  .homeInnerImgBlur {
+    top: 150%;
+    left: 2px;
+    width: 480px;
+    height: 563px;
+  }
+
+  .stroke {
+    transform: rotate(0deg);
+    bottom: 100px;
+  }
+
+  .what {
+    padding: 160px 0 80px;
+  }
+  .whatinnerList {
+    display: none;
+    visibility: hidden;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .whatinnerListItemSword,
+  .whatinnerListItemCup,
+  .whatinnerListItemFlag,
+  .whatinnerListItemBrain {
+    height: 320px;
+  }
+
+  .whatinnerList {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .workInnerList {
+    flex-direction: column;
+  }
+
+  .workInnerListItemGroupImg {
+    width: 310px;
+    height: 662px;
+  }
+
+  .workInnerListItemGroupImgStartZoom,
+  .workInnerListItemGroupImgNextZoom,
+  .workInnerListItemGroupImgEndZoom {
+    width: 361px;
+    height: 94px;
+    left: -7%;
+  }
+
+  .workInnerListItemGroup {
+  }
+
+  .workInnerListItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .workInnerListSpan {
+    transform: rotate(90deg);
+  }
+
+  .progressInnerMap {
+    display: flex;
+    width: 100%;
+    // flex-direction: row-reverse;
+  }
+
+  .progressInnerMapRoad {
+    display: none;
+    visibility: hidden;
+  }
+
+  .progressInnerMapRoadMob {
+    position: relative;
+    // left: -71px;
+    width: 154px;
+    height: 1365px;
+  }
+
+  .progressInnerMapListTwo,
+  .progressInnerMapList {
+    display: none;
+    visibility: hidden;
+  }
+
+  .progressInnerMapListMob {
+    position: relative;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    height: 754px;
+    gap: 81px;
+    margin-top: 300px;
+    color: $color;
+  }
+
+  .partnersInner {
+    height: 737px;
+  }
+
+  .partnersInnerImgMob {
+    width: 100%;
+  }
+
+  .partnersInnerCont {
+    width: 329px;
+    left: 9px;
+    right: 9px;
+    top: 48px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .partnersInnerContTitle {
+    font-size: 40px;
+  }
+
+  .partnersInnerContSub {
+    font-size: 14px;
+    width: 329px;
+  }
+
+  .partnersInnerContLink {
+    display: block;
+    width: 267px;
+    margin: 0 auto;
+  }
+
+  .partnersInnerImg {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 412px) {
+  .homeInnerContentTitle,
+  .whatinnerTitle,
+  .workInnerTitle,
+  .progressInnerTitle {
+    font-size: 39px;
+  }
+
+  .whatinnerListItem,
+  .whatinnerListItemSword,
+  .whatinnerListItemCup,
+  .whatinnerListItemFlag,
+  .whatinnerListItemBrain {
+    width: 326px;
+  }
+  .mySwiper {
+    width: 390px;
+  }
+}

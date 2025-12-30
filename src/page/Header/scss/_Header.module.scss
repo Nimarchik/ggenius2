@@ -1,0 +1,171 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 56px 0 32px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navLogoLinkImg {
+  transition: all 0.4s;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #ccc);
+    transition: all 0.4s;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.navListItemLink {
+  position: relative;
+  color: #c5c5c5e3;
+  transition: all 0.4s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+.active {
+  position: relative;
+  color: #dedede;
+  filter: drop-shadow(0 0 5px #aaa);
+  transition: all 0.4s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    filter: drop-shadow(0 0 5px #aaa);
+
+    transition: all 0.4s;
+  }
+}
+
+.listLang {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.navIns {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.navLink {
+  position: relative;
+  @include btn;
+  transition: all 0.4s;
+}
+
+.hiddenTgWidget {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; // Делаем виджет полностью невидимым
+  cursor: pointer;
+}
+
+.navLinkLogin {
+  position: relative;
+  padding: 16px 40px;
+  font-weight: 800;
+  font-size: 18px;
+  transition: all 0.4s;
+
+  &:hover {
+    .navLinkLoginList {
+      opacity: 1;
+
+      visibility: visible;
+      transition: all 0.4s;
+    }
+  }
+}
+
+.navMenuActiveLine,
+.navCopyListMob,
+.navLang,
+.navMenuDis,
+.menu,
+.mySwiper,
+.progressInnerMapRoadMob,
+.progressInnerMapListMob,
+.footerCopySubMob,
+.footerCopyListMob {
+  display: none;
+  visibility: hidden;
+}
+
+// .navLinkLoginList {
+//   position: absolute;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px;
+//   opacity: 0;
+//   visibility: hidden;
+//   overflow: hidden;
+//   padding: 12px;
+//   background-color: rgba($color: #ccc, $alpha: .3);
+//   border: 1px solid #ccc;
+//   border-radius: 12px;
+//   transition: all 0.4s;
+// }
+
+// .navLinkLoginListItem {
+
+// }
+
+@import "./media.module";

@@ -1,0 +1,52 @@
+@media screen and (max-width: 560px) {
+  .footer {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
+
+  .footeNav {
+    flex-direction: column;
+  }
+
+  .footerNavList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    gap: 35px;
+  }
+
+  .footerNavLogoLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 48px;
+  }
+
+  .footerCopyListMob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+    margin-bottom: 51px;
+  }
+
+  .footerCopySubMob {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: $color;
+  }
+
+  .footerCopyListItemImg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footerCopy {
+    display: none;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$montserrat: "Montserrat", sans-serif;
+$poppins: "Poppins", sans-serif;
+$color: #fff;
+$btn-primary:
+  linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+  radial-gradient(1.89% 46.43% at 49.64% 46.43%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
+$stroke-primary-btn:
+  linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+  radial-gradient(1.89% 46.43% at 49.64% 46.43%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
+
+$btn-primary-hover:
+  radial-gradient(69.25% 69.32% at 47.35% 93.75%, rgba(255, 255, 255, 0.4) 0%, rgba(11, 49, 143, 0) 100%),
+  radial-gradient(78.51% 56.91% at 51.91% 52.6%, #0084ff 0%, #375be0 100%);
+$stroke-primary-btn-hover:
+  linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+  radial-gradient(1.89% 46.43% at 49.64% 46.43%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
+
+$negative200: rgba(123, 165, 255, 0.24);
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  font-family: $montserrat;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+
+  background: linear-gradient(135deg, #05060d 0%, #080a17 35%, #0b1230 65%, #0a1f4a 100%);
+}
+
+html {
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #05060d 0%, #080a17 35%, #0b1230 65%, #0a1f4a 100%);
+  background: linear-gradient(135deg, #05060d 0%, #080a17 35%, #0b1230 65%, #0a1f4a 100%);
+}
+body {
+  overflow: hidden;
+}
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  color: inherit;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+@mixin btn {
+  position: relative;
+  padding: 16px 40px;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 32px;
+  color: $color;
+
+  background:
+    $btn-primary,
+    radial-gradient(69.25% 69.32% at 47.35% 93.75%, rgba(255, 255, 255, 0.4) 0%, rgba(11, 49, 143, 0) 100%),
+    radial-gradient(73.64% 50.63% at 50% 50%, #3575ff 19.71%, #002987 100%);
+
+  box-shadow:
+    0 2px 4px rgba(69, 95, 162, 0.25),
+    0 8px 16px rgba(69, 106, 162, 0.12),
+    0 16px 32px rgba(41, 57, 100, 0.25),
+    inset 0 0 8px #fff,
+    inset 0 -24px 32px rgba(255, 255, 255, 0.12),
+    0 8px 24px inset rgba(255, 255, 255, 0.32);
+
+  transition: all 0.5s;
+
+  &:hover {
+    border-radius: 32px;
+    background:
+      $btn-primary-hover,
+      radial-gradient(69.25% 69.32% at 47.35% 93.75%, rgba(255, 255, 255, 0.4) 0%, rgba(11, 49, 143, 0) 100%),
+      radial-gradient(78.51% 56.91% at 51.91% 52.6%, #0084ff 0%, #375be0 100%);
+    box-shadow:
+      0 2px 4px rgba(69, 95, 162, 0.25),
+      0 8px 16px rgba(69, 106, 162, 0.12),
+      0 16px 32px rgba(41, 57, 100, 0.25),
+      inset 0 0 20px #fff,
+      inset 0 24px 32px rgba(255, 255, 255, 0.12),
+      inset 0 8px 24px rgba(255, 255, 255, 0.32);
+
+    transform: scale(1.05);
+    transition: background transform box-shadow 0.5s;
+  }
+}
+
+@mixin titleSection {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: -1.28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color;
+  margin-bottom: 24px;
+}
+
+@mixin titleSectionMob {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: -1.28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color;
+  margin-bottom: 24px;
+}
+
+@mixin subSection {
+  width: 680px;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: $color;
+}
+
+@mixin subSectionMob {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: $color;
+}
+
+@mixin block {
+  position: relative;
+  padding: 100px 64px;
+  width: 100%;
+  overflow: hidden;
+}
+
+@mixin langActive {
+  border-radius: 32px;
+  color: #000;
+  padding: 12px 35px;
+  font-size: 12px;
+  font-family: $poppins;
+  font-weight: 800;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: -0.24px;
+  background-color: #fff;
+  transition: all 0.4s;
+}
+@mixin langDis {
+  color: #fff;
+  padding: 12px 35px;
+  font-size: 12px;
+  font-family: $poppins;
+  font-weight: 800;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: -0.24px;
+  border-radius: 32px;
+  background-color: rgba($color: $color, $alpha: 0.1);
+  transition: all 0.4s;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  z-index: 10;
+  background: linear-gradient(135deg, #05060d 0%, #080a17 35%, #0b1230 65%, #0a1f4a 100%);
+}
+
+.main {
+  position: relative;
+  flex-grow: 1;
+}
+
+.container {
+  width: 1680px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+@media screen and (max-width: 1920px) {
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    width: 420px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .container {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 390px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    width: 350px;
+  }
+}
+
+@import "../../page/Home/scss/Home.module";
+@import "../../page/Header/scss/Header.module";
+@import "../../page/Footer/scss/Footer.module";
+@import "../../page/About/About.module";
+@import "../../page/Error/scss/Error.module";

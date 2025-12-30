@@ -1,0 +1,643 @@
+.home {
+  position: relative;
+  background: linear-gradient(140deg, rgba(7, 5, 24, 0) 61.23%, #070518 86.34%);
+  width: 100%;
+  height: 1107px;
+  padding: 150px 0px;
+
+  mask-image: linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
+}
+
+.imgBack {
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 1107px;
+  background: linear-gradient(140deg, rgba(7, 5, 24, 0) 61.23%, #070518 86.34%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.homeInner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.homeInnerImg,
+.homeInnerImgBlur {
+  position: absolute;
+  top: 121px;
+  // width: 864px;
+  // height: 831px;
+  left: 0;
+  pointer-events: none;
+}
+
+.homeInnerImgBlur,
+.homeInnerImg2Blur {
+  filter: blur(25px);
+  mix-blend-mode: lighten;
+}
+
+.homeInnerImg2,
+.homeInnerImg2Blur {
+  position: absolute;
+  top: 81px;
+  // width: 964px;
+  // height: 931px;
+  right: 0;
+  pointer-events: none;
+}
+
+.homeinnerImgGroup {
+  position: relative;
+}
+
+.homeInnerContent {
+  position: relative;
+  // top: 354px;
+  top: 100%;
+  left: 50%;
+  width: 1108px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -10%)
+}
+
+.homeInnerContentTitle {
+  @include titleSection;
+}
+
+.homeInnerContentSub {
+  @include subSection;
+  margin-bottom: 44px;
+}
+
+.homeInnerContentLink {
+  @include btn;
+  transition: all 0.5s;
+}
+
+.homeInnerImgUnion {
+  pointer-events: none;
+  position: absolute;
+  bottom: 13%;
+  left: 34%;
+  color: $color;
+  opacity: 0.02;
+  font-weight: 800;
+  font-size: 92px;
+  width: 690px;
+  text-align: center;
+  text-transform: uppercase;
+  background-blend-mode: overlay;
+}
+
+.stroke {
+  position: absolute;
+  bottom: 107px;
+  transform: rotate(2.06deg);
+  width: 100%;
+  padding: 24px 0;
+  overflow: hidden; /* 🔥 ОБЯЗАТЕЛЬНО */
+  background:
+    linear-gradient(97deg, rgba(131, 131, 131, 0.2) 35.34%, rgba(86, 86, 86, 0.2) 50.26%, rgba(74, 74, 74, 0.2) 65.17%),
+    linear-gradient(97deg, rgba(131, 131, 131, 0.2) 35.34%, rgba(86, 86, 86, 0.2) 50.26%, rgba(74, 74, 74, 0.2) 65.17%);
+  z-index: 999;
+}
+
+.strokeTrack {
+  display: inline-flex;
+  gap: 62px;
+  align-items: center;
+  width: max-content;
+}
+
+.strokeGroup {
+  display: inline-flex;
+  gap: 62px;
+  align-items: center;
+  flex-shrink: 0;
+  animation: marquee 20s linear infinite ;
+}
+
+.strokeGroupRev {
+  display: inline-flex;
+  gap: 62px;
+  align-items: center;
+  flex-shrink: 0;
+  animation: marqueeRev 20s linear infinite reverse;
+}
+
+.strokeImg {
+  height: 40px; /* пример */
+  flex-shrink: 0;
+}
+
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes marqueeRev {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.what {
+  // position: relative;
+  padding: 80px 0;
+}
+
+.whatinnerTitle {
+  @include titleSection;
+  text-align: left;
+}
+
+.whatinnerSub {
+  @include subSection;
+  text-align: left;
+  margin-bottom: 48px;
+}
+
+.whatinnerList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.whatinnerListItem,
+.whatinnerListItemSword,
+.whatinnerListItemCup,
+.whatinnerListItemFlag,
+.whatinnerListItemBrain {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  width: 305px;
+  border-radius: 24px;
+  color: $color;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background:
+    radial-gradient(64.8% 53.19% at 20.3% 29.12%, rgba(35, 53, 221, 0.5) 0%, rgba(0, 12, 101, 0) 100%),
+    linear-gradient(36deg, rgba(0, 34, 255, 0) 43.41%, rgba(0, 34, 255, 0.2) 90.92%),
+    linear-gradient(303deg, rgba(255, 255, 255, 0.05) 16.73%, rgba(255, 255, 255, 0) 131.77%);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.05) inset;
+  backdrop-filter: blur(1px);
+}
+
+.whatinnerListItemSword {
+  &:hover {
+    .whatinnerListItemImgRight {
+      animation: swordRightCycle 1.2s ease-in-out forwards;
+    }
+
+    .whatinnerListItemImgLeft {
+      animation: swordLeftCycle 1.2s ease-in-out forwards;
+    }
+
+    @keyframes swordRightCycle {
+      0% {
+        left: 0;
+        transform: rotate(-17deg);
+      }
+
+      50% {
+        left: 50px;
+        transform: rotate(30deg);
+      }
+
+      100% {
+        left: 0;
+        transform: rotate(-17deg);
+      }
+    }
+
+    @keyframes swordLeftCycle {
+      0% {
+        left: 0;
+        transform: rotate(60deg);
+      }
+
+      50% {
+        left: -50px;
+        transform: rotate(0deg);
+      }
+      100% {
+        left: 0;
+        transform: rotate(60deg);
+      }
+    }
+  }
+}
+
+.whatinnerListItemTitle {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.whatinnerListItemSub,
+.whatinnerListItemTitle {
+  width: 276px;
+}
+
+.whatinnerListItemGroupImg {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 24px;
+}
+
+.whatinnerListItemImgRight,
+.whatinnerListItemImgLeft {
+  position: absolute;
+  top: -65px;
+  left: 0;
+  width: 103px;
+  height: 255px;
+  filter: drop-shadow(0 0 10px $color);
+  transition: all 0.4s;
+
+  &::after {
+    position: absolute;
+    content: "";
+    filter: blur(5px);
+    width: 123px;
+    height: 265px;
+  }
+}
+
+.whatinnerListItemImgRight {
+  transform: rotate(-17deg);
+}
+
+.whatinnerListItemImgLeft {
+  transform: rotate(60deg);
+}
+
+.whatinnerListItemCup {
+  &:hover {
+    .whatinnerListItemImgCup,
+    .whatinnerListItemImgCupFill {
+      animation: cup 1.2s ease forwards;
+    }
+
+    @keyframes cup {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+      75% {
+        transform: rotate(-10deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.whatinnerListItemImgCup,
+.whatinnerListItemImgCupFill,
+.whatinnerListItemImgFlag {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 24px;
+  transition: transform 1s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    filter: blur(2px) drop-shadow(0 0 10px $color);
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.whatinnerListItemImgCupFill {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  filter: blur(2px) drop-shadow(0 0 10px $color);
+  z-index: -1;
+}
+
+.whatinnerListItemFlag {
+  transition: animation 0.4s;
+
+  &:hover {
+    $frames: 15;
+    $w: 120px;
+    $h: 120px;
+
+    .whatinnerListItemImgFlag {
+      width: $w;
+      height: $h;
+
+      background: url("/src/page/Home/img/flag-sprite.png") 0 0 no-repeat;
+      background-size: calc(#{$w} * #{$frames}) $h;
+
+      animation: flagWave 1.3s steps(15, end);
+      animation-timing-function: steps(15, end);
+      transition: animation 0.4s;
+    }
+
+    :global {
+      @keyframes flagWave {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: calc(-#{$w} * #{$frames}) 0;
+        }
+      }
+    }
+
+    .whatinnerListItemImgFlag2 {
+      background-image: none;
+      transition: background-image 0.4s;
+    }
+  }
+}
+.whatinnerListItemImgFlag2 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: url("/src/page/Home/img/flag.webp");
+  background-repeat: no-repeat;
+  background-size: 120px 120px;
+  background-position: left -5px;
+  transition: background-image 0.4s;
+}
+
+.ellips1 {
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: -31%;
+  width: 853px;
+  height: 853px;
+  border-radius: 50%;
+  background: rgba(0, 100, 255, 0.3);
+  filter: blur(300px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.whatinnerListItemBrain {
+  &:hover {
+    .whatinnerListItemImgElBrain {
+      transform: rotate(360deg);
+      transition: transform 1s;
+    }
+  }
+}
+
+.whatinnerListItemBrainGroup {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 24px;
+}
+
+.whatinnerListItemImgBrain {
+  position: absolute;
+  top: 0;
+  width: 117px;
+  height: 110px;
+}
+
+.whatinnerListItemImgElBrain {
+  position: absolute;
+  top: -5%;
+  width: 120px;
+  height: 120px;
+  transform: rotate(0deg);
+  transition: transform 1s;
+}
+
+.work {
+  padding: 80px 0;
+}
+
+.workInnerHeder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workInnerTitle {
+  @include titleSection;
+}
+
+.workInnerSub {
+  @include subSection;
+  margin-bottom: 32px;
+}
+
+.workInnerLink {
+  @include btn;
+  margin-bottom: 58px;
+}
+
+.workInnerList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.workInnerListItemTitle {
+  color: $color;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 32px;
+}
+
+.workInnerListItemGroup {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.workInnerListItemGroupImg {
+  // filter: blur(1px);
+  opacity: 0.7;
+}
+
+.workInnerListItemGroupImgStartZoom,
+.workInnerListItemGroupImgNextZoom,
+.workInnerListItemGroupImgEndZoom {
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  border-radius: 16px;
+}
+
+.workInnerListItemGroupImgStartZoom,
+.workInnerListItemGroupImgNextZoom {
+  bottom: 28px;
+}
+
+.workInnerListItemGroupImgEndZoom {
+  bottom: 76px;
+}
+
+.workInnerListItemSub,
+.workInnerListItemSubNext,
+.workInnerListItemSubEnd {
+  width: 400px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: pre-line;
+  line-height: 120%;
+}
+
+.workInnerListItemSubEnd,
+.workInnerListItemSubNext {
+  width: 250px;
+}
+
+.progress {
+  padding: 80px 0;
+}
+
+.progressInner {
+  position: relative;
+}
+
+.progressInnerTitle {
+  @include titleSection;
+  margin-bottom: 80px;
+}
+
+.progressInnerMapRoad {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.progressInnerMapList {
+  display: flex;
+  justify-content: end;
+  gap: 160px;
+  width: 1070px;
+  margin: 0 auto;
+  color: $color;
+}
+
+.progressInnerMapListItem {
+  text-align: center;
+  width: 250px;
+  padding: 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(130, 153, 255, 0);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0) 10.39%, rgba(255, 255, 255, 0.05) 78.43%),
+    linear-gradient(165deg, rgba(255, 255, 255, 0) 10.39%, rgba(255, 255, 255, 0.05) 78.43%);
+}
+
+.progressInnerMapListItemTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 24px */
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.progressInnerMapListItemSub {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+}
+
+.progressInnerMapListTwo {
+  display: flex;
+  justify-content: flex-end;
+  gap: 160px;
+  color: $color;
+  width: 660px;
+  margin: 0 auto;
+}
+
+.partners {
+  padding: 100px 0;
+}
+
+.partnersInner {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border: 1px solid rgba(98, 127, 252, 0.338);
+  border-radius: 40px;
+  z-index: 10;
+
+  &:hover {
+    .partnersInnerImg {
+      transform: scale(1.1);
+      transition: all 0.4s;
+    }
+  }
+}
+
+.partnersInnerCont {
+  position: absolute;
+  top: 136px;
+  left: 64px;
+  z-index: 10;
+  width: 580px;
+  color: $color;
+}
+
+.partnersInnerContTitle {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 120%; /* 76.8px */
+  letter-spacing: -1.28px;
+  margin-bottom: 24px;
+}
+
+.partnersInnerContSub {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%; /* 21.6px */
+  margin-bottom: 44px;
+}
+
+.partnersInnerImg {
+  transition: all 0.4s;
+}
+
+.partnersInnerContLink {
+  @include btn;
+  font-size: 18px;
+}
+
+@import './media.module';

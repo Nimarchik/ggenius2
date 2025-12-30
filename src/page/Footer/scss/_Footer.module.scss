@@ -1,0 +1,88 @@
+.footer {
+  position: relative;
+  padding: 100px 0px;
+}
+
+.footerStroke {
+  // position: absolute;
+  bottom: 107px;
+  transform: rotate(-2.06deg);
+  width: 100%;
+  padding: 24px 0;
+  overflow: hidden;
+  background:
+    linear-gradient(97deg, rgba(131, 131, 131, 0.2) 35.34%, rgba(86, 86, 86, 0.2) 50.26%, rgba(74, 74, 74, 0.2) 65.17%),
+    linear-gradient(97deg, rgba(131, 131, 131, 0.2) 35.34%, rgba(86, 86, 86, 0.2) 50.26%, rgba(74, 74, 74, 0.2) 65.17%);
+  z-index: 999;
+  margin-bottom: 100px;
+}
+
+.footeNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 44px;
+}
+
+.footerNavList {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.line {
+  display: block;
+  background-color: #3f426a;
+  height: 1px;
+  width: 100%;
+  margin-bottom: 44px;
+}
+
+.footerCopy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $color;
+}
+
+.footerCopyList {
+  display: flex;
+  gap: 24px;
+}
+
+.footerCopyListItemLinkIns,
+.footerCopyListItemLinkYT,
+.footerCopyListItemLinkTT,
+.footerCopyListItemLinkDS {
+transition: all .4s;
+}
+
+.footerCopyListItemLinkIns {
+  &:hover {
+    filter: drop-shadow(0 0 30px #e1306c);
+    transition: filter 0.4s;
+  }
+}
+
+.footerCopyListItemLinkYT {
+  &:hover {
+    filter: drop-shadow(0 0 30px red);
+    transition: filter 0.4s;
+  }
+}
+
+.footerCopyListItemLinkTT {
+  &:hover {
+    filter: drop-shadow(0 0 30px white);
+    transition: filter 0.4s;
+  }
+}
+
+.footerCopyListItemLinkDS {
+  &:hover {
+    filter: drop-shadow(0 0 30px blue);
+    transition: filter 0.4s;
+  }
+}
+
+@import './media.module';

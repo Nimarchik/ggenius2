@@ -1,0 +1,58 @@
+.errorPage {
+}
+
+.errorPageInner {
+  position: relative;
+}
+
+.errorPageInnerCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $color;
+  z-index: 100;
+}
+
+.errorPageInnerContTitle {
+  @include titleSection;
+}
+.errorPageInnerContSub {
+  @include subSection;
+  margin-bottom: 24px;
+}
+
+.errorPageInnerContLink
+ {
+  @include btn;
+}
+
+@media screen and (max-width: 560px) {
+  .errorPage {
+    padding: 100px 0 0;
+  }
+  .errorPageInnerCont,
+  .errorPageInnerContSub {
+    width: 100%;
+  }
+
+  .errorPageInnerContTitle {
+    font-size: 40px;
+  }
+  .errorPageInnerContSub {
+    font-size: 16px;
+  }
+  .errorPageInnerBack {
+    display: none;
+  }
+
+  .errorPageInnerBackMob {
+    width: 100%;
+    height: 100%;
+  }
+}

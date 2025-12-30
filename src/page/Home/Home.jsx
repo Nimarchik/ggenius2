@@ -1,0 +1,436 @@
+import style from '../../assets/style/index.module.css'
+import useLangChange from '../../Hooks/LangChange'
+import { Link } from 'react-router-dom'
+import Marquee from '../../Hooks/Marquee'
+import { useRef, useState, useEffect } from 'react';
+// IMAGES
+import back from './img/back.webp'
+import sue from './img/sue.webp'
+import obs from './img/obs.webp'
+import sword from './img/sword.webp'
+import cup from './img/icon.webp'
+import brain from './img/brain.webp'
+import elementsBrain from './img/elementsBrain.webp'
+import start from './img/start.webp'
+import next from './img/next.webp'
+import end from './img/end.webp'
+import startZoom from './img/startZoom.webp'
+import nextZoom from './img/nextZoom.webp'
+import endZoom from './img/endZoom.webp'
+import roadMap from './img/roadMap.webp'
+import partners from './img/Partners.webp'
+import partnersMob from './img/partnersMob.png'
+
+import logo from '../Header/img/logo.png'
+import star from './img/Star.svg'
+import roadMapMob from './img/roadMapMob.png'
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
+
+const Home = () => {
+
+
+  return <>
+    <section className={style.home}>
+      <img className={style.imgBack} src={back} alt="" />
+      <div className={style.homeInner}>
+        <div className={style.homeinnerImgGroup}>
+          <img className={style.homeInnerImgBlur} src={sue} alt="" />
+          <img className={style.homeInnerImg} src={sue} alt="" />
+        </div>
+        <div className={style.container}>
+
+          <div className={style.homeInnerContent}>
+            <h1 className={style.homeInnerContentTitle}>
+              {useLangChange('homeInnerContentTitle')}
+            </h1>
+            <p className={style.homeInnerContentSub}>
+              {useLangChange('homeInnerContentSub')}
+            </p>
+            <Link to='https://t.me/ggeniusgg_bot' className={style.homeInnerContentLink}>
+              {useLangChange('navLink')}
+            </Link>
+          </div>
+        </div>
+
+        <div className={style.homeinnerImgGroup2}>
+          <img className={style.homeInnerImg2Blur} src={obs} alt="" />
+          <img className={style.homeInnerImg2} src={obs} alt="" />
+        </div>
+
+        <div className={style.homeInnerImgUnion}>Mobile Legends</div>
+      </div>
+
+      {/* <div className={style.stroke}>
+        <div className={style.strokeTrack}>
+          <div className={style.strokeGroup}>
+            {stroke([star, logo, star, logo, star, logo, star, logo, star, logo, star, logo])}
+          </div>
+          <div className={style.strokeGroupRev}>
+            {stroke([star, logo, star, logo, star, logo, star, logo, star, logo, star, logo])}
+          </div>
+        </div>
+      </div> */}
+
+      <Marquee images={[star, logo, star, logo, star, logo, star, logo, star, logo, star, logo]} styles={`${style.stroke}`} />
+    </section>
+
+    <section className={style.what}>
+      <div className={style.container}>
+        <div className={style.whatinner}>
+          <h1 className={style.whatinnerTitle}>
+            {useLangChange('whatinnerTitle')}
+          </h1>
+          <p className={style.whatinnerSub}>
+            {useLangChange('whatinnerSub')}
+          </p>
+          <div className={style.slider}>
+            <Swiper pagination={true} modules={[Pagination]} slidesPerView={1} className={style.mySwiper} style={{
+              width: '380px',
+              height: '370px'
+            }}>
+              <SwiperSlide style={{
+                width: '100%',
+                height: '364px',
+                // margin: '0 0 0 -10px'
+              }}>
+                <li className={style.whatinnerListItemSword}>
+                  <div className={style.whatinnerListItemGroupImg}>
+                    <img className={style.whatinnerListItemImgRight} src={sword} alt="" />
+                    <img className={style.whatinnerListItemImgLeft} src={sword} alt="" />
+                  </div>
+                  <h2 className={style.whatinnerListItemTitle}>
+                    {useLangChange('whatinnerListItemTitle1')}
+                  </h2>
+                  <p className={style.whatinnerListItemSub}>
+                    {useLangChange('whatinnerListItemSub1')}
+                  </p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide style={{
+                width: '360px',
+                height: '364px'
+              }}>
+                <li className={style.whatinnerListItemCup}>
+                  <img className={style.whatinnerListItemImgCup} src={cup} alt="" />
+                  <img className={style.whatinnerListItemImgCupFill} src={cup} alt="" />
+                  <h2 className={style.whatinnerListItemTitle}>
+                    {useLangChange('whatinnerListItemTitle2')}
+                  </h2>
+                  <p className={style.whatinnerListItemSub}>
+                    {useLangChange('whatinnerListItemSub2')}
+                  </p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide style={{
+                width: '360px',
+                height: '364px'
+              }}>
+                <li className={style.whatinnerListItemFlag}>
+                  <div className={style.whatinnerListItemImgFlag}>
+                    <div className={style.whatinnerListItemImgFlag2}></div>
+                  </div>
+                  <h2 className={style.whatinnerListItemTitle}>
+                    {useLangChange('whatinnerListItemTitle3')}
+                  </h2>
+                  <p className={style.whatinnerListItemSub}>
+                    {useLangChange('whatinnerListItemSub3')}
+                  </p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide style={{
+                width: '360px',
+                height: '364px'
+              }}>
+                <li className={style.whatinnerListItemBrain}>
+                  <div className={style.whatinnerListItemBrainGroup}>
+                    <img className={style.whatinnerListItemImgBrain} src={brain} alt="" />
+                    <img className={style.whatinnerListItemImgElBrain} src={elementsBrain} alt="" />
+
+                  </div>
+                  <h2 className={style.whatinnerListItemTitle}>
+                    {useLangChange('whatinnerListItemTitle4')}
+                  </h2>
+                  <p className={style.whatinnerListItemSub}>
+                    {useLangChange('whatinnerListItemSub4')}
+                  </p>
+                </li>
+              </SwiperSlide>
+            </Swiper>
+            <ul className={style.whatinnerList}>
+              <li className={style.whatinnerListItemSword}>
+                <div className={style.whatinnerListItemGroupImg}>
+                  <img className={style.whatinnerListItemImgRight} src={sword} alt="" />
+                  <img className={style.whatinnerListItemImgLeft} src={sword} alt="" />
+                </div>
+                <h2 className={style.whatinnerListItemTitle}>
+                  {useLangChange('whatinnerListItemTitle1')}
+                </h2>
+                <p className={style.whatinnerListItemSub}>
+                  {useLangChange('whatinnerListItemSub1')}
+                </p>
+              </li>
+              <li className={style.whatinnerListItemCup}>
+                <img className={style.whatinnerListItemImgCup} src={cup} alt="" />
+                <img className={style.whatinnerListItemImgCupFill} src={cup} alt="" />
+                <h2 className={style.whatinnerListItemTitle}>
+                  {useLangChange('whatinnerListItemTitle2')}
+                </h2>
+                <p className={style.whatinnerListItemSub}>
+                  {useLangChange('whatinnerListItemSub2')}
+                </p>
+              </li>
+              <li className={style.whatinnerListItemFlag}>
+                <div className={style.whatinnerListItemImgFlag}>
+                  <div className={style.whatinnerListItemImgFlag2}></div>
+
+                </div>
+                <h2 className={style.whatinnerListItemTitle}>
+                  {useLangChange('whatinnerListItemTitle3')}
+                </h2>
+                <p className={style.whatinnerListItemSub}>
+                  {useLangChange('whatinnerListItemSub3')}
+                </p>
+              </li>
+              <li className={style.whatinnerListItemBrain}>
+                <div className={style.whatinnerListItemBrainGroup}>
+                  <img className={style.whatinnerListItemImgBrain} src={brain} alt="" />
+                  <img className={style.whatinnerListItemImgElBrain} src={elementsBrain} alt="" />
+
+                </div>
+                <h2 className={style.whatinnerListItemTitle}>
+                  {useLangChange('whatinnerListItemTitle4')}
+                </h2>
+                <p className={style.whatinnerListItemSub}>
+                  {useLangChange('whatinnerListItemSub4')}
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <span className={style.ellips1}></span>
+      </div>
+    </section>
+
+    <section className={style.work}>
+      <div className={style.container}>
+        <div className={style.workInner}>
+          <div className={style.workInnerHeder}>
+            <h2 className={style.workInnerTitle}>
+              {useLangChange('workInnerTitle')}
+            </h2>
+            <p className={style.workInnerSub}>
+              {useLangChange('workInnerSub')}
+            </p>
+            <Link to='https://t.me/@ggeniusgg_bot' className={style.workInnerLink}>
+              {useLangChange('navLink')}
+            </Link>
+          </div>
+
+          <ul className={style.workInnerList}>
+            <li className={style.workInnerListItem}>
+              <h3 className={style.workInnerListItemTitle}>
+                {useLangChange('workInnerListItemTitleStart')}
+              </h3>
+              <div className={style.workInnerListItemGroup}>
+                <img src={start} alt="" className={style.workInnerListItemGroupImg} />
+                <img src={startZoom} alt="" className={style.workInnerListItemGroupImgStartZoom} />
+              </div>
+              <p className={style.workInnerListItemSub}>
+                {useLangChange('workInnerListItemSubStart')}
+              </p>
+            </li>
+            <span className={style.workInnerListSpan}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="157" viewBox="0 0 80 157" fill="none">
+                <path d="M0 0V21.6207L59.4569 77.4741L0 138.733V156.75L79.2759 77.4741L0 0Z" fill="url(#paint0_linear_34_362)" />
+                <path d="M0 57.6552V36.0345L45.0431 77.4741L0 126.121V102.698L25.2241 77.4741L0 57.6552Z" fill="url(#paint1_linear_34_362)" />
+                <defs>
+                  <linearGradient id="paint0_linear_34_362" x1="79.2759" y1="77.4741" x2="-5.3623" y2="78" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00369B" />
+                    <stop offset="1" stop-color="#00369B" stop-opacity="0" />
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_34_362" x1="79.2759" y1="77.4741" x2="-5.3623" y2="78" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00369B" />
+                    <stop offset="1" stop-color="#00369B" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <li className={style.workInnerListItem}>
+              <h3 className={style.workInnerListItemTitle}>
+                {useLangChange('workInnerListItemTitleNext')}
+              </h3>
+              <div className={style.workInnerListItemGroup}>
+                <img src={next} alt="" className={style.workInnerListItemGroupImg} />
+                <img src={nextZoom} alt="" className={style.workInnerListItemGroupImgNextZoom} />
+              </div>
+              <p className={style.workInnerListItemSubNext}>
+                {useLangChange('workInnerListItemSubNext')}
+
+              </p>
+            </li>
+            <span className={style.workInnerListSpan}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="157" viewBox="0 0 80 157" fill="none">
+                <path d="M0 0V21.6207L59.4569 77.4741L0 138.733V156.75L79.2759 77.4741L0 0Z" fill="url(#paint0_linear_34_362)" />
+                <path d="M0 57.6552V36.0345L45.0431 77.4741L0 126.121V102.698L25.2241 77.4741L0 57.6552Z" fill="url(#paint1_linear_34_362)" />
+                <defs>
+                  <linearGradient id="paint0_linear_34_362" x1="79.2759" y1="77.4741" x2="-5.3623" y2="78" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00369B" />
+                    <stop offset="1" stop-color="#00369B" stop-opacity="0" />
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_34_362" x1="79.2759" y1="77.4741" x2="-5.3623" y2="78" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00369B" />
+                    <stop offset="1" stop-color="#00369B" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <li className={style.workInnerListItem}>
+              <h3 className={style.workInnerListItemTitle}>
+                {useLangChange('workInnerListItemTitleEnd')}
+              </h3>
+              <div className={style.workInnerListItemGroup}>
+                <img src={end} alt="" className={style.workInnerListItemGroupImg} />
+                <img src={endZoom} alt="" className={style.workInnerListItemGroupImgEndZoom} />
+              </div>
+              <p className={style.workInnerListItemSubEnd}>
+                {useLangChange('workInnerListItemSubEnd')}
+
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section className={style.progress}>
+      <div className={style.container}>
+        <div className={style.progressInner}>
+          <h3 className={style.progressInnerTitle}>
+            {useLangChange('progressInnerTitle')}
+          </h3>
+          <div className={style.progressInnerMap}>
+            <ul className={style.progressInnerMapList}>
+              <li className={style.progressInnerMapListItem}>
+                <h4 className={style.progressInnerMapListItemTitle}>
+                  {useLangChange('progressInnerMapListItemTitle1')}
+                </h4>
+                <p className={style.progressInnerMapListItemSub}>
+                  {useLangChange('progressInnerMapListItemSub1')}
+                </p>
+              </li>
+              <li className={style.progressInnerMapListItem}>
+                <h4 className={style.progressInnerMapListItemTitle}>
+                  {useLangChange('progressInnerMapListItemTitle3')}
+                </h4>
+                <p className={style.progressInnerMapListItemSub}>
+                  {useLangChange('progressInnerMapListItemSub3')}
+                </p>
+              </li>
+              <li className={style.progressInnerMapListItem}>
+                <h4 className={style.progressInnerMapListItemTitle}>
+                  {useLangChange('progressInnerMapListItemTitle5')}
+                </h4>
+                <p className={style.progressInnerMapListItemSub}>
+                  {useLangChange('progressInnerMapListItemSub5')}
+                </p>
+              </li>
+            </ul>
+            <img src={roadMap} alt="" className={style.progressInnerMapRoad} />
+            <img src={roadMapMob} alt="" className={style.progressInnerMapRoadMob} />
+            <ul className={style.progressInnerMapListMob}>
+              <li className={style.progressInnerMapListItem}>
+                <h4 className={style.progressInnerMapListItemTitle}>
+                  {useLangChange('progressInnerMapListItemTitle1')}
+                </h4>
+                <p className={style.progressInnerMapListItemSub}>
+                  {useLangChange('progressInnerMapListItemSub1')}
+                </p>
+              </li>
+              <li className={style.progressInnerMapListItem}>
+                <h4 className={style.progressInnerMapListItemTitle}>
+                  {useLangChange('progressInnerMapListItemTitle2')}
+                </h4>
+                <p className={style.progressInnerMapListItemSub}>
+                  {useLangChange('progressInnerMapListItemSub2')}
+                </p>
+              </li>
+              <li className={style.progressInnerMapListItem}>
+                <h4 className={style.progressInnerMapListItemTitle}>
+                  {useLangChange('progressInnerMapListItemTitle3')}
+                </h4>
+                <p className={style.progressInnerMapListItemSub}>
+                  {useLangChange('progressInnerMapListItemSub3')}
+                </p>
+              </li>
+              <li className={style.progressInnerMapListItem}>
+                <h4 className={style.progressInnerMapListItemTitle}>
+                  {useLangChange('progressInnerMapListItemTitle4')}
+
+                </h4>
+                <p className={style.progressInnerMapListItemSub}>
+                  {useLangChange('progressInnerMapListItemSub4')}
+                </p>
+              </li>
+              <li className={style.progressInnerMapListItem}>
+                <h4 className={style.progressInnerMapListItemTitle}>
+                  {useLangChange('progressInnerMapListItemTitle5')}
+                </h4>
+                <p className={style.progressInnerMapListItemSub}>
+                  {useLangChange('progressInnerMapListItemSub5')}
+                </p>
+              </li>
+            </ul>
+
+            <ul className={style.progressInnerMapListTwo}>
+              <li className={style.progressInnerMapListItem}>
+                <h4 className={style.progressInnerMapListItemTitle}>
+                  {useLangChange('progressInnerMapListItemTitle2')}
+                </h4>
+                <p className={style.progressInnerMapListItemSub}>
+                  {useLangChange('progressInnerMapListItemSub2')}
+                </p>
+              </li>
+              <li className={style.progressInnerMapListItem}>
+                <h4 className={style.progressInnerMapListItemTitle}>
+                  {useLangChange('progressInnerMapListItemTitle4')}
+
+                </h4>
+                <p className={style.progressInnerMapListItemSub}>
+                  {useLangChange('progressInnerMapListItemSub4')}
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section className={style.partners}>
+      <div className={style.container}>
+        <Link to='https://t.me/is_mlbb' className={style.partnersInner}>
+          <div className={style.partnersInnerCont}>
+            <h4 className={style.partnersInnerContTitle}>
+              {useLangChange('partnersInnerContTitle')}
+            </h4>
+
+            <p className={style.partnersInnerContSub}>
+              {useLangChange('partnersInnerContSub')}
+            </p>
+            <span className={style.partnersInnerContLink}>
+              {useLangChange('partnersInnerContLink')}
+            </span>
+          </div>
+          <img className={style.partnersInnerImg} src={partners} alt='mllbb heroes' />
+          <img className={style.partnersInnerImgMob} src={partnersMob} alt='mllbb heroes' />
+
+        </Link>
+      </div>
+    </section>
+  </>
+}
+
+export default Home;
