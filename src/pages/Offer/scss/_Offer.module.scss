@@ -1,0 +1,188 @@
+.offer {
+  padding: 80px 0;
+}
+
+.offerInner {
+  position: relative;
+  overflow-y: auto;
+  height: 1000px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.offerInnerHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.offerInnerHeaderSpans {
+  display: flex;
+  gap: 20px;
+}
+
+.offerInnerHeaderSub {
+  font-size: 16px;
+}
+
+.offerInnerStat {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.offerInnerContentList {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  top: 100px;
+  padding: 12px 0;
+  width: 320px;
+  height: 820px;
+  border-radius: 16px;
+  background: #031843;
+}
+
+.offerInnerStatInf {
+}
+
+.offerInnerHeaderTitle,
+.offerInnerStatTitle {
+  @include titleSection;
+  font-size: 40px;
+}
+
+.offerInnerStat {
+  margin: 0 auto;
+}
+
+.offerInnerStatTitle {
+  font-size: 20px;
+  text-align: left;
+}
+
+.offerInnerStatSub,
+.offerInnerStatDiscSub,
+.offerInnerStatSubjList {
+  width: 600px;
+  padding: 15px;
+  background-color: rgba($color: #33067a, $alpha: 0.5);
+  border-radius: 14px;
+  border: 1px solid #33067a;
+  margin-bottom: 20px;
+  transition: all 0.4s;
+}
+
+.offerInnerStatDiscSub {
+  background-color: rgba($color: #7a0e06, $alpha: 0.5);
+  border: 1px solid #610801;
+}
+
+.offerInnerStatDiscTitle {
+  margin-bottom: 20px;
+}
+
+.offerBodyTableOneTd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  width: 300px;
+  height: 200px;
+  border: solid 1px $color;
+}
+
+.offerInnerStatSubjList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offerInnerStatSubjListItem {
+  display: flex;
+  gap: 10px;
+}
+
+.offerInnerStatSubjListItemSubLink {
+  position: relative;
+  cursor: pointer;
+
+  transition: all 0.4s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background-color: $color;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    transition: all 0.4s;
+
+    &::after {
+      width: 100%;
+      box-shadow: 0 -10px 50px #fff;
+      left: 0;
+      transition: all 0.4s;
+    }
+  }
+}
+
+.offerInnerFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 560px) {
+  .offer {
+    padding: 100px 0 80px;
+  }
+
+  .offerInner {
+    position: none;
+    overflow-y: visible;
+    height: auto;
+  }
+
+  .offerInnerContentList {
+    display: none;
+  }
+
+  .offerInnerHeaderSub {
+    font-size: 14px;
+  }
+
+  .offerInnerHeaderTitle {
+    font-size: 35px;
+  }
+
+  .offerInnerStat,
+  .offerInnerStatInf,
+  .offerInnerStatSub,
+  .offerInnerStatDiscSub {
+    width: 95%;
+  }
+
+  .offerInnerStatSub,
+  .offerInnerStatDiscSub,
+  .offerInnerStatSubjList {
+    width: 90%;
+  }
+
+  .offerInnerFooter {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

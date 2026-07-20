@@ -1,0 +1,148 @@
+@media screen and (max-width: 580px) {
+  .products {
+    padding: 130px 0 80px;
+  }
+
+  .productsInnerTitle {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .productsInnerSubGroupsInfo {
+    margin-bottom: 50px;
+  }
+
+  .productsInnerSubGroups {
+    height: auto;
+  }
+
+  .productsInnerSub {
+    width: 90%;
+  }
+
+  .productsInnerList {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .productsInnerListItem,
+  .productsInnerListItemDis {
+    width: 95%;
+  }
+
+  .productsInnerSub {
+    height: auto;
+  }
+
+  .productsInnerList {
+    flex-direction: column;
+  }
+
+  .productsInnerSubGroupsSort {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+  }
+  .productsInnerSubGroupsSortBtns {
+    flex-direction: row-reverse;
+  }
+  .productsInnerSubGroupsSortBtns div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .productsInnerHader {
+    flex-wrap: wrap;
+    height: 330px;
+  }
+
+  .productsInnerTop {
+    // padding: 50px 0;
+    flex-direction: column;
+  }
+
+  .productsInnerTopInfoFilter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productsInnerTopInfoFilterNav {
+    margin-bottom: 4px;
+  }
+
+  .productsInnerTopDis {
+    // height: 250px;
+  }
+
+  .productsInnerTopInfoList {
+    z-index: 999;
+  }
+
+  .productsInnerList {
+    padding: 50px 0;
+  }
+
+  .productsInnerListItemDis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profileInnerHeaderList {
+    width: 100%;
+  }
+
+  .productsInnerTopInfoFilterTitle {
+    margin-bottom: 24px;
+  }
+
+  .donateInnerDescriptInfo,
+  .firstTopUpInfo {
+    text-align: center;
+    width: 100%;
+  }
+  .donateInnerDescriptTitle,
+  .firstTopUpTitle {
+    text-align: center;
+    font-size: 37px;
+  }
+  .donateInnerDescriptPurchaseList,
+  .donateInnerDescriptImportantList,
+  .donateInnerDescriptImportantListItem,
+  .firstTopUpList {
+    text-align-last: left;
+  }
+}
+
+@media screen and (max-width: 540px) {
+}
+
+@media screen and (max-width: 430px) {
+  .productsInnerTop {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 414px) {
+}
+
+@media screen and (max-width: 412px) {
+}
+
+@media screen and (max-width: 390px) {
+}
+
+@media screen and (max-width: 380px) and (max-height: 740px) {
+}
+
+@media screen and (max-width: 375px) {
+}
+
+@media screen and (max-width: 360px) {
+}
+
+@media screen and (max-width: 346px) {
+}
+
+@media screen and (max-width: 344px) {
+}

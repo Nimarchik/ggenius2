@@ -7,11 +7,11 @@ export default defineConfig({
   plugins: [react(),],
   server: {
     allowedHosts: [
-      'eff8-109-229-4-212.ngrok-free.app'
+      '2d3b-109-229-4-212.ngrok-free.app'
     ],
     proxy: {
       '/api': {
-        target: 'https://ggenius-api.onrender.com/bots/auth.php',
+        target: 'https://ggenius-api.onrender.com/',
         changeOrigin: true,
         secure: false,
       }

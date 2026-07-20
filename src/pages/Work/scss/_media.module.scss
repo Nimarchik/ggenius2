@@ -1,0 +1,110 @@
+@media screen and (max-width: 560px) {
+  .workInnerGroup {
+    width: 100%;
+  }
+  .worksInnerList {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .worksInnerListItem,
+  .worksInnerListItemAnaliz,
+  .worksInnerListItemSocial,
+  .worksInnerListItemTourn,
+  .worksInnerListItemPay {
+    width: 90%;
+    height: 500px;
+    flex-direction: column;
+  }
+
+  .workInnerListItemNav {
+    width: 95%;
+  }
+
+  .workInnerListItemNavSpanSoc {
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .workInnerListItemNavSocial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .workInnerRegTitle {
+    font-size: 25px;
+  }
+
+  .workInnerRegInf {
+    width: 90%;
+  }
+
+  .workInnerInfImg,
+  .workInnerInfImgBlur {
+    width: 340px;
+    height: 340px;
+  }
+
+  .workInnerRegImg,
+  .workInnerRegImgBlur {
+    width: 540px;
+    height: 340px;
+  }
+
+  .workInnerRegLeylaImg,
+  .workInnerRegLeylaImgBlur {
+    width: 640px;
+    height: 340px;
+  }
+
+  .workInnerRegTourn {
+    bottom: 50%;
+  }
+  .workInnerRegTournImg,
+  .workInnerRegTournImgBlur {
+    width: 450px;
+    height: 250px;
+  }
+  .workInnerGordImg,
+  .workInnerGordImgBlur {
+    width: 400px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .worksInnerListItem,
+  .worksInnerListItemAnaliz,
+  .worksInnerListItemSocial,
+  .worksInnerListItemTourn,
+  .worksInnerListItemPay {
+    width: 90%;
+    height: 500px;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 414px) {
+  .worksInnerListItem,
+  .worksInnerListItemAnaliz,
+  .worksInnerListItemSocial,
+  .worksInnerListItemTourn,
+  .worksInnerListItemPay {
+    width: 85%;
+    height: 500px;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 412px) {
+}
+
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 380px) {
+}
+
+@media screen and (max-width: 375px) {
+}

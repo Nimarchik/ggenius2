@@ -1,0 +1,132 @@
+@mixin btn {
+  position: relative;
+  padding: 16px 40px;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 32px;
+  color: $color;
+
+  background:
+    $btn-primary,
+    radial-gradient(69.25% 69.32% at 47.35% 93.75%, rgba(255, 255, 255, 0.4) 0%, rgba(11, 49, 143, 0) 100%),
+    radial-gradient(73.64% 50.63% at 50% 50%, #3575ff 19.71%, #002987 100%);
+
+  box-shadow:
+    0 2px 4px rgba(69, 95, 162, 0.25),
+    0 8px 16px rgba(69, 106, 162, 0.12),
+    0 16px 32px rgba(41, 57, 100, 0.25),
+    inset 0 0 8px #fff,
+    inset 0 -24px 32px rgba(255, 255, 255, 0.12),
+    0 8px 24px inset rgba(255, 255, 255, 0.32);
+
+  transition: all 0.5s;
+
+  &:hover {
+    border-radius: 32px;
+    background:
+      $btn-primary-hover,
+      radial-gradient(69.25% 69.32% at 47.35% 93.75%, rgba(255, 255, 255, 0.4) 0%, rgba(11, 49, 143, 0) 100%),
+      radial-gradient(78.51% 56.91% at 51.91% 52.6%, #0084ff 0%, #375be0 100%);
+    box-shadow:
+      0 2px 4px rgba(69, 95, 162, 0.25),
+      0 8px 16px rgba(69, 106, 162, 0.12),
+      0 16px 32px rgba(41, 57, 100, 0.25),
+      inset 0 0 20px #fff,
+      inset 0 24px 32px rgba(255, 255, 255, 0.12),
+      inset 0 8px 24px rgba(255, 255, 255, 0.32);
+
+    transform: scale(1.05);
+    transition: background transform box-shadow 0.5s;
+  }
+}
+
+@mixin titleSection {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: -1.28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color;
+  margin-bottom: 24px;
+}
+
+@mixin titleSectionMob {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: -1.28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color;
+  margin-bottom: 24px;
+}
+
+@mixin subSection {
+  width: 680px;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: $color;
+}
+
+@mixin subSectionMob {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: $color;
+}
+
+@mixin block {
+  position: relative;
+  padding: 100px 64px;
+  width: 100%;
+  overflow: hidden;
+}
+
+@mixin langActive {
+  color: #000;
+  padding: 16px 40px;
+  font-size: 12px;
+  font-family: $poppins;
+  font-weight: 800;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: -0.24px;
+  border-radius: 24px;
+  background: $color;
+  transition: all 0.4s;
+}
+
+@mixin langDis {
+  color: #fff;
+  padding: 16px 40px;
+  font-size: 12px;
+  font-family: $poppins;
+  font-weight: 800;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: -0.24px;
+  border-radius: 24px;
+  background-color: rgba($color: $color, $alpha: 0.1);
+  transition: all 0.4s;
+}
+
+@mixin Item {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  width: 305px;
+  border-radius: 24px;
+  color: $color;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background:
+    radial-gradient(64.8% 53.19% at 20.3% 29.12%, rgba(35, 53, 221, 0.5) 0%, rgba(0, 12, 101, 0) 100%),
+    linear-gradient(36deg, rgba(0, 34, 255, 0) 43.41%, rgba(0, 34, 255, 0.2) 90.92%),
+    linear-gradient(303deg, rgba(255, 255, 255, 0.05) 16.73%, rgba(255, 255, 255, 0) 131.77%);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.05) inset;
+  backdrop-filter: blur(1px);
+}

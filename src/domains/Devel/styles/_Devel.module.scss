@@ -1,0 +1,105 @@
+.devel {
+  padding: 80px 0;
+}
+
+.develInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.develInnerTitle,
+.develInnerStartTitle {
+  @include titleSection;
+}
+
+.develInnerTitle {
+  margin-bottom: 10px;
+}
+
+.develInnerSub {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.develInnerStart {
+  padding: 20px;
+
+  border: solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+
+  background:
+    radial-gradient(64.8% 53.19% at 20.3% 29.12%, rgba(35, 53, 221, 0.5) 0%, rgba(0, 12, 101, 0) 100%),
+    linear-gradient(36deg, rgba(0, 34, 255, 0) 43.41%, rgba(0, 34, 255, 0.2) 90.92%),
+    linear-gradient(303deg, rgba(255, 255, 255, 0.05) 16.73%, rgba(255, 255, 255, 0) 131.77%);
+}
+
+.develInnerStartTitle {
+  font-size: 20px;
+}
+
+.develInnerStartList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.develInnerImg {
+  transform: rotate(90deg) !important;
+}
+
+.develInnerFooter {
+  display: block;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.paymentSuccess {
+  padding: 80px 0;
+}
+
+.paymentSuccessInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  margin: 0 auto;
+  text-align: center;
+  width: 1000px;
+  gap: 20px;
+}
+
+.paymentSuccessText {
+}
+
+.paymentSuccessBtn {
+  @include btn;
+}
+
+@media screen and (max-width: 560px) {
+  .devel {
+    padding: 100px 0;
+  }
+  .develInnerTitle {
+    font-size: 35px;
+  }
+  .develInnerSub {
+    width: 310px;
+    font-size: 14px;
+  }
+  .develInnerStart {
+    width: 80%;
+  }
+  .develInnerStart {
+    text-align: center;
+  }
+  .develInnerFooter {
+    width: 90%;
+    margin: 40px auto;
+  }
+}

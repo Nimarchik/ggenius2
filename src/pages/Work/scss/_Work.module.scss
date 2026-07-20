@@ -1,0 +1,248 @@
+.work {
+  position: relative;
+  padding: 0;
+}
+
+.workImg {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.workInner {
+  width: 100%;
+}
+
+.workInnerGroup {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.workInnerInf,
+.workInnerReg {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.worksInnerList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.worksInnerListItem,
+.worksInnerListItemAnaliz,
+.worksInnerListItemSocial,
+.worksInnerListItemTourn,
+.worksInnerListItemPay {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  height: 350px;
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid rgba(98, 127, 252, 0.338);
+  border-radius: 40px;
+  z-index: 10;
+  transition: all 0.4s;
+}
+
+.worksInnerListItem {
+  &:hover {
+    box-shadow: 0 0 20px rgba(98, 127, 252, 0.438);
+    transition: all 0.4s;
+
+    .workInnerInfImgBlur,
+    .workInnerInfImg {
+      transform: scale(1.05);
+      transition: all 0.4s;
+    }
+  }
+}
+
+.worksInnerListItemAnaliz {
+  &:hover {
+    box-shadow: 0 0 20px rgba(98, 127, 252, 0.438);
+    transition: all 0.4s;
+    .workInnerRegImg,
+    .workInnerRegImgBlur {
+      transform: scale(1.05);
+      transition: all 0.4s;
+    }
+  }
+}
+
+.worksInnerListItemSocial,
+.worksInnerListItemTourn {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  &:hover {
+    box-shadow: 0 0 20px rgba(98, 127, 252, 0.438);
+    transition: all 0.4s;
+    .workInnerRegLeylaImg,
+    .workInnerRegLeylaImgBlur {
+      transform: scale(1.05);
+      transition: all 0.4s;
+    }
+  }
+}
+
+.worksInnerListItemTourn {
+  &:hover {
+    box-shadow: 0 0 20px rgba(98, 127, 252, 0.438);
+    transition: all 0.4s;
+    .workInnerRegTournImg,
+    .workInnerRegTournImgBlur {
+      transform: scale(1.05);
+      transition: all 0.4s;
+    }
+  }
+}
+
+.worksInnerListItemPay {
+  &:hover {
+    box-shadow: 0 0 20px rgba(98, 127, 252, 0.438);
+    transition: all 0.4s;
+    .workInnerGordImg,
+    .workInnerGordImgBlur {
+      transform: scale(1.05);
+      transition: all 0.4s;
+    }
+  }
+}
+
+.workInnerListItemNav,
+.workInnerListItemNavSocial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 400px;
+}
+
+.workInnerListItemNavSocial {
+  text-align: right;
+  width: 350px;
+}
+
+.workInnerListItemNavSpan,
+.workInnerListItemNavSpanSoc {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.workInnerListItemNavSpanSoc {
+  flex-direction: row-reverse;
+}
+
+.workInnerRegTitle {
+  font-size: 40px;
+}
+
+.workInnerListItemNavSvg,
+.workInnerListItemNavSpanSvg {
+  width: 50px;
+  height: 50px;
+}
+
+.sora,
+.workInnerRegMia,
+.workInnerRegLeyla,
+.workInnerRegTourn {
+  position: relative;
+}
+
+.workInnerInfImgBlur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(25px);
+  z-index: -1;
+}
+
+.workInnerInfImg,
+.workInnerInfImgBlur {
+  width: 500px;
+  height: 500px;
+  transition: all 0.4s;
+}
+
+.workInnerRegLeyla {
+  left: -25%;
+  bottom: -20px;
+}
+
+.workInnerRegLeylaImg,
+.workInnerRegLeylaImgBlur {
+  position: absolute;
+  bottom: 0;
+  left: -25%;
+  width: 600px;
+  height: 400px;
+  transition: all 0.4s;
+}
+
+.workInnerRegLeylaImgBlur {
+  filter: blur(25px);
+  z-index: -1;
+}
+
+.workInnerRegTourn {
+  left: -10%;
+}
+.workInnerRegTournImg,
+.workInnerRegTournImgBlur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 400px;
+  transition: all 0.4s;
+}
+
+.workInnerRegTournImgBlur {
+  filter: blur(25px);
+  z-index: -1;
+}
+
+.workInnerGordImg,
+.workInnerGordImgBlur {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 450px;
+  height: 300px;
+  transition: all 0.4s;
+}
+
+.workInnerGordImgBlur {
+  filter: blur(25px);
+  z-index: -1;
+}
+
+.workInnerRegMia {
+  right: -10%;
+  bottom: -20px;
+}
+
+.workInnerRegImg,
+.workInnerRegImgBlur {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 650px;
+  height: 400px;
+  transition: all 0.4s;
+}
+
+.workInnerRegImgBlur {
+  position: absolute;
+  filter: blur(25px);
+  z-index: -1;
+}
+
+@import './media.module';

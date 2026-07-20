@@ -1,0 +1,432 @@
+.donate {
+  padding: 80px 0;
+  height: 600px;
+}
+
+.downloads {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading {
+  width: 100px;
+  height: 100px;
+  border: 4px solid #ccc; /* светлый цвет */
+  border-top: 4px solid #3498db; /* цвет верхней части */
+  border-radius: 50%; /* круг */
+  animation: spin 1s linear infinite;
+  margin: 50px auto; /* центрирование */
+  box-shadow: 0 0 20px #3498db;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.donateInner {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.donateInnerDescript {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+}
+
+.donateInnerDescriptInfo,
+.firstTopUpInfo {
+  width: 686px;
+}
+
+.donateInnerDescriptHeader {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.donateInnerDescriptTitle,
+.firstTopUpTitle {
+  @include titleSection;
+  text-align: left;
+  font-size: 40px;
+}
+
+.donateInnerDescriptSub,
+.donateInnerDescriptWhySub,
+.firstTopUpSub {
+  color: #c5c5c5;
+}
+
+.donateInnerDescriptPurchaseTitle,
+.donateInnerDescriptImportantTitle,
+.donateInnerDescriptWhyTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.donateInnerDescriptPurchase,
+.donateInnerDescriptImportant {
+  margin-bottom: 32px;
+}
+
+.donateInnerDescriptPurchaseList {
+  display: flex;
+  flex-direction: column;
+  list-style-type: decimal;
+  margin-left: 20px;
+  gap: 16px;
+}
+
+.donateInnerDescriptImportantList,
+.firstTopUpList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.firstTopUpList {
+  margin-bottom: 32px;
+}
+
+.firstTopUpListItem,
+.donateInnerDescriptImportantListItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #017fff;
+  }
+}
+
+.firstTopUpTitle {
+  margin-bottom: 24px;
+}
+
+.firstTopUpSub {
+  margin-bottom: 32px;
+}
+.firstTopUpInfoListenTitle {
+  margin-bottom: 16px;
+}
+
+.firstTopUpDesc {
+  padding: 16px;
+  background-color: #017fff;
+  border-radius: 12px;
+}
+
+.donateInnerinfoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.donateInnerNav {
+  display: flex;
+  gap: 30px;
+}
+
+.productsInnerListItemDon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // width: 300px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background:
+    radial-gradient(64.8% 53.19% at 20.3% 29.12%, rgba(35, 53, 221, 0.5) 0%, rgba(0, 12, 101, 0) 100%),
+    linear-gradient(36deg, rgba(0, 34, 255, 0) 43.41%, rgba(0, 34, 255, 0.2) 90.92%),
+    linear-gradient(303deg, rgba(255, 255, 255, 0.05) 16.73%, rgba(255, 255, 255, 0) 131.77%);
+  transition: all 0.4s;
+}
+
+.donateInnerTitle {
+  color: $color;
+}
+
+.productsInnerListItemSub {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.donateInnerForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: $color;
+  transition: all 0.4s;
+}
+
+.donateInnerFormLabel {
+  position: relative;
+  margin-bottom: 30px;
+
+  &:hover {
+    .donateInnerInp {
+      box-shadow: 0 0 10px #3498db;
+      transition: all 0.4s;
+    }
+
+    .donateInnerFormLabelTitleId {
+      font-size: 18px;
+      color: $color;
+      font-weight: 600;
+
+      transform: translateY(-40px);
+      transition: all 0.4s;
+    }
+  }
+
+  &:focus-within {
+    .donateInnerFormLabelTitleId {
+      font-size: 18px;
+      color: $color;
+      font-weight: 600;
+
+      transform: translateY(-40px);
+      transition: all 0.4s;
+    }
+  }
+}
+
+.donateInnerFormLabelServ {
+  position: relative;
+
+  &:hover {
+    .donateInnerInp {
+      box-shadow: 0 0 10px #3498db;
+      transition: all 0.4s;
+
+      &:not(:placeholder-shown) + .donateInnerFormLabelTitleServ {
+        transform: translateY(-40px);
+        transition: all 0.4s;
+      }
+    }
+    .donateInnerFormLabelTitleServ {
+      font-size: 18px;
+      color: $color;
+      font-weight: 600;
+
+      transform: translateY(-40px);
+      transition: all 0.4s;
+    }
+  }
+
+  &:focus-within {
+    .donateInnerFormLabelTitleServ {
+      font-size: 18px;
+      color: $color;
+      font-weight: 600;
+
+      transform: translateY(-40px);
+      transition: all 0.4s;
+    }
+  }
+}
+
+.donateInnerFormLabelTitleServActive,
+.donateInnerFormLabelTitleIdActive {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: $color;
+  transform: translateY(-40px);
+  transition: all 0.4s;
+}
+
+.donateInnerFormLabelTitle,
+.donateInnerFormLabelTitleId,
+.donateInnerFormLabelTitleServ {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #c4c4c4;
+  transition: all 0.4s;
+}
+
+.donateInnerInp,
+.donateInnerInpServ,
+.donateInnerInpId {
+  position: relative;
+  width: 97%;
+  padding: 15px 10px;
+  color: $color;
+  border: solid 1px #c4c4c4;
+  border-radius: 12px;
+  transition: all 0.4s;
+
+  &:focus {
+    box-shadow: 0 0 10px #3498db;
+    transition: all 0.4s;
+  }
+}
+
+.donateInnerBtn {
+  @include btn;
+  color: $color;
+  width: 100%;
+}
+
+.donateInnerCheckNick {
+  width: 100%;
+}
+
+.donateInnerCheckNickSub,
+.checking {
+  padding: 10px;
+  border-radius: 14px;
+  background-color: rgba(0, 128, 0, 0.4);
+  margin-top: 10px;
+}
+
+.checking {
+  background-color: orange;
+}
+
+.donateInnerCheckNickSubUser {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.donateInnerFormInp {
+  display: flex;
+  gap: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+
+  &::selection {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+.donateInnerFormInpSubLink {
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: all 0.4s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color;
+    transition: all 0.4s;
+  }
+
+  &::selection {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  &:hover {
+    text-shadow: #3498db 0 0 10px;
+
+    &::after {
+      box-shadow: 10px 0 50px $color;
+      transition: all 0.4s;
+    }
+  }
+}
+
+.donateInnerFormLabelChec {
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+
+.donateInnerFormLabelChecA {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.donateInnerFormInpChec {
+  display: none;
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.donateInnerFormInpChec:checked + .donateInnerFormSpanSvgActive {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.donateInnerFormInpChec:checked + .donateInnerFormSpan {
+  box-shadow: 0 0 20px #3498db;
+}
+
+.inpErrorActive {
+  padding: 5px;
+  font-size: 15px;
+  color: rgba(255, 0, 0, 0.678);
+  margin-top: 5px;
+}
+
+.inpError {
+  color: #c4c4c4;
+}
+
+.donateInnerFormSpanSvgActive {
+  fill: #3498db;
+  transition: all 0.4s;
+}
+
+.donateInnerFormSpan {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: solid 1px #3498db;
+  background-color: transparent;
+  transition: all 0.4s;
+}
+
+.donateInnerFormSpanSvg {
+  visibility: hidden;
+  opacity: 0;
+  fill: #3498db;
+  transition: all 0.4s;
+}
+
+@import "./media.module";
